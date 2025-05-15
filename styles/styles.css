@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root{
-    --color-neutral-000: #ffffff;
-    --color-neutral-800: #1d1e20;
-    --color-neutral-900: #000000;
+    --color-neutral--000: #ffffff;
+    --color-neutral--800: #1d1e20;
+    --color-neutral--900: #000000;
+
+    --color-purple--100: #e3dcfc;
+    --color-purple--500: #673de6;
+    --color-purple--800: #2f1c6a;
+    --color-purple--900: #301c6b;
 }
 
 *{
@@ -42,19 +47,28 @@
     font-size: 48px;
 }
 
+.font-weight--bolder{
+    font-weight: 700;
+}
+
+
 .flex-align--center{
     display: flex;
     align-items: center;
 }
 
+
 /* Header styles */
 header{
-    display: flex;
+    background-color: var(--color-neutral--000);
     height: 88px;
     width: 100vw;
     padding: 20px 40px;
-    color: var(--color-neutral-800);
+    color: var(--color-neutral--800);
     box-shadow: 0 4px 10px #0000001a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 .nav-login-container__header{
     justify-content: space-between;
@@ -67,15 +81,14 @@ nav{
 nav a{
     display: flex;
     text-decoration: none;
-    color: var(--color-neutral-800);
+    color: var(--color-neutral--800);
 }
 .h-svgo-icon{
     height: 24px;
-    color: var(--color-neutral-800);
+    color: var(--color-neutral--800);
 }
 .login-container__header{
     gap: 32px;
-    font-weight: 700;
     justify-content: end;
 }
 .login-container__header img{
@@ -83,16 +96,14 @@ nav a{
     margin-right: 4px;
 }
 .login-button__header{
-    border: 2px solid var(--color-neutral-800);
+    border: 2px solid var(--color-neutral--800);
     padding: 12px 16px;
     background-color: transparent;
     border-radius: 8px;
-    font-weight: 700;
 }
 .list-menu__header{
     position: absolute;
-    display: none;
-    
+    display: none;   
 }
 @media (max-width: 1140px){
     header{
@@ -109,6 +120,148 @@ nav a{
     }
     .list-menu__header{
         display: flex;
+    }
+}
+
+
+main{
+    width: 100vw;
+}
+.section-container__hero{
+    padding: 36px 40px 96px 40px;
+    color: var(--color-purple--800);
+    display: flex;
+    justify-content: center;
+}
+.content-container__hero{
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 1392px;
+}
+.paragraph__hero{
+    margin-top: 8px;
+}
+.check-icon__header{
+    height: 24px;
+    color: #00b090;
+}
+.icon--small{
+    height: 16px;
+}
+.aside-container__hero{
+    width: 442px;
+    min-width: 384px;
+}
+.span-check-list-container__header{
+    margin: 24px 0;
+}
+.span-check-list__hero{
+    gap: 10px
+}
+.paragraph-percentage__hero{
+    color: var(--color-purple--500);
+}
+.months-free__hero{
+    margin: 2px 0 24px ;
+}
+.buttons-container__hero{
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.button-claim-deal__hero{
+    background-color: var(--color-purple--500);
+    padding: 12px 48px;
+    text-decoration: none;
+    color: var(--color-neutral--000);
+    border-radius: 8px;
+}
+.timer-container__hero{
+    background-color: var(--color-purple--100);
+    width: 160px;
+    height: 48px;
+    justify-content: center;
+    border-radius: 8px;
+}
+.guarantee__hero{
+    gap: 4px;
+}
+.image-container__hero img{
+    width: 880px;
+}
+@media (max-width: 1550px){
+    .content-container__hero{
+        justify-content: center;
+    }
+}
+@media (max-width: 1365px){
+    .image-container__hero img{
+        width: 616px;
+    }
+    .content-container__hero{
+        justify-content: space-between;
+        max-width: 1128px;
+        min-width: 0;
+    }
+}
+@media(max-width: 1025px){
+    .title__hero{
+        font-size: 28px;
+    }
+    .paragraph__hero{
+        font-size: 18px;
+    }
+    .price-currency__hero{
+        font-size: 18px;
+    }
+    .price-months__hero{
+        font-size: 18px;
+    }
+    .price-number__hero{
+        font-size: 40px;
+    }
+    .months-free__hero{
+        font-size: 18px;
+    }
+    .content-container__hero{
+        flex-direction: column;
+        align-items: center;
+        width: 668px;
+    }
+    .aside-container__hero{
+        width: 100%;
+    }
+    .image-container__hero img{
+        width: 100%;
+    }
+}
+@media(max-width: 768px){
+
+    .section-container__hero{
+        padding: 36px 16px 96px 16px;
+    }
+    .title__hero{
+        font-size: 24px;
+    }
+    .price-number__hero{
+        font-size: 36px;
+    }
+    .buttons-container__hero{
+        flex-direction: column;
+    }
+    .button-claim-deal__hero{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .timer-container__hero{
+        width: 100%;
+    }
+    .content-container__hero{
+        max-width: 508px;
+    }
+    .aside-container__hero{
+        width: 100%;
+        min-width: 0;
     }
 }
 
