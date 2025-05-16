@@ -7,8 +7,13 @@
 
     --color-purple--100: #e3dcfc;
     --color-purple--500: #673de6;
+    --color-purple--700: #301c6b;
     --color-purple--800: #2f1c6a;
-    --color-purple--900: #301c6b;
+    --color-purple--900: #1e1345;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 *{
@@ -124,9 +129,7 @@ nav a{
 }
 
 
-main{
-    width: 100vw;
-}
+
 .section-container__hero{
     padding: 36px 40px 96px 40px;
     color: var(--color-purple--800);
@@ -136,7 +139,8 @@ main{
 .content-container__hero{
     justify-content: space-between;
     gap: 8px;
-    min-width: 1392px;
+    width: 100%;
+    max-width: 1392px;
 }
 .paragraph__hero{
     margin-top: 8px;
@@ -262,6 +266,83 @@ main{
     .aside-container__hero{
         width: 100%;
         min-width: 0;
+    }
+}
+
+
+
+
+
+.section-container__migration{
+    flex-direction: column;
+    padding: 80px 40px;
+    color: var(--color-neutral--000);
+    background-color: var(--color-purple--900);
+    text-align: center;
+}
+.paragraph__migration{
+    max-width: 1128px;
+    margin: 24px 0 48px;
+}
+.cards-container__migration{
+    text-align: start;
+    gap: 24px;
+    display: flex;
+    align-items: stretch;
+}
+.card__migration{
+    background-color: var(--color-purple--800);
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    flex: 1;
+    padding: 32px;
+    gap: 16px;
+    border-radius: 16px;
+}
+.icon-container__migration{
+    height: 40px;
+    width: 40px;
+    color: var(--color-neutral--000);
+    background-color: var(--color-purple--500);
+    justify-content: center;
+    border-radius: 4px;
+}
+.icon__migration{
+    height: 24px;
+}
+.get-started-button__migration{
+    padding: 12px 48px;
+    margin-top: 32px;
+    background-color: var(--color-purple--500);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-neutral--000);
+}
+@media(max-width: 1025px){
+    .paragraph__migration{
+        width: 688px;
+    }
+    .cards-container__migration{
+        flex-direction: column;
+    }
+    .card__migration{
+        max-width: 688px;
+    }
+    .title__migration{
+        font-size: 28px;
+    }
+}
+@media(max-width: 768px){
+    .paragraph__migration{
+        width: 508px;
+        max-width: 100%;
+    }
+    .card__migration{
+        max-width: 508px;
+    }
+    .title__migration{
+        font-size: 24px;
     }
 }
 
