@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
 :root{
     --color-neutral--000: #ffffff;
+    --color-neutral--100: #f5f6ff;
     --color-neutral--800: #1d1e20;
     --color-neutral--900: #000000;
 
@@ -13,25 +13,19 @@
     --color-purple--800: #2f1c6a;
     --color-purple--900: #1e1345;
 }
-
 body {
     overflow-x: hidden;
 }
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "DM Sans", sans-serif;
     font-size: 16px;
-    line-height: 24px;
+    letter-spacing: 0.5px;
 }
-
 .font-size--000{
     font-size: 14px;
-}
-.font-size--100{
-    font-size: 16px;
 }
 .font-size--200{
     font-size: 18px;
@@ -39,31 +33,25 @@ body {
 .font-size--300{
     font-size: 20px;
 }
-.font-size--400{
-    font-size: 24px;
-}
-.font-size--500{
-    font-size: 28px;
-}
 .font-size--600{
     font-size: 36px;
-}
-.font-size--700{
-    font-size: 40px;
 }
 .font-size--800{
     font-size: 48px;
 }
-
 .font-weight--bolder{
     font-weight: 700;
 }
-
-
 .flex-align--center{
     display: flex;
     align-items: center;
 }
+.gap--32{
+    gap: 32px;
+}
+
+
+
 
 
 /* Header styles */
@@ -81,22 +69,19 @@ header{
 .nav-login-container__header{
     justify-content: space-between;
     width: 100%;
-}
-nav{
-    gap: 32px;
     padding-left: 40px;
 }
 nav a{
     display: flex;
     text-decoration: none;
     color: var(--color-neutral--800);
+
 }
 .h-svgo-icon{
     height: 24px;
     color: var(--color-neutral--800);
 }
 .login-container__header{
-    gap: 32px;
     justify-content: end;
 }
 .login-container__header img{
@@ -116,6 +101,7 @@ nav a{
 @media (max-width: 1140px){
     header{
         height: 62px;
+        padding: 16px 20px;
     }
     nav a{
         display: none;
@@ -130,9 +116,12 @@ nav a{
         display: flex;
     }
 }
+   
 
 
 
+
+/* Hero styles */
 .section-container__hero{
     padding: 36px 40px 96px 40px;
     color: var(--color-purple--800);
@@ -172,9 +161,14 @@ nav a{
 .paragraph-percentage__hero{
     color: var(--color-purple--500);
 }
-.months-free__hero{
-    margin: 2px 0 24px ;
+.price-container__hero{
+    height: 56px;
 }
+.months-free-container__hero{
+    margin: 4px 0 24px;
+    height: 36px;
+}
+
 .buttons-container__hero{
     gap: 12px;
     margin-bottom: 12px;
@@ -216,7 +210,7 @@ nav a{
 }
 @media(max-width: 1025px){
     .section-container__hero{
-        padding: 62px 40px 80px 62px;
+        padding: 62px 40px 80px 40px;
     }
     .title__hero{
         font-size: 28px;
@@ -246,6 +240,12 @@ nav a{
     }
     .image-container__hero img{
         width: 100%;
+    }
+    .months-free-container__hero{
+        margin-bottom: 16px;
+    }
+    .guarantee__hero{
+        margin-bottom: 32px;
     }
 }
 @media(max-width: 768px){
@@ -284,6 +284,7 @@ nav a{
 
 
 
+/* Migration styles */
 .section-container__migration{
     flex-direction: column;
     padding: 80px 40px;
@@ -366,11 +367,14 @@ nav a{
 
 
 
+
+/* Footer styles */
 footer{
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 56px 40px 0 40px;
+    background-color: var(--color-neutral--100);
 }
 .content-container__footer{
     width: 1128px;
@@ -387,6 +391,10 @@ footer{
 .logo__footer{
     height: 30px;
     fill: var(--color-purple--700);
+}
+.socials-container__footer{
+    display: flex;
+    gap: 16px;
 }
 .socials__footer{
     height: 32px;
@@ -430,6 +438,7 @@ footer{
     .payment-policys-container__footer{
         flex-direction: column-reverse ;
         gap: 16px;
+        margin-bottom: 40px;
     }
     .copyright-container__footer{
         flex-direction: column;
@@ -463,7 +472,12 @@ footer{
         min-width: 0;
     }
 }
+ 
 
+
+
+
+/* Kodee styles */
 .kodee-button{
     display: flex;
     align-items: center;
