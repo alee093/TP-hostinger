@@ -467,8 +467,8 @@ footer{
         width: 300px;
     }
     .policys-container__footer{
-        justify-content: space-between;
-        max-width: 328px;
+        justify-content: start;
+        max-width: 100%;
         min-width: 0;
     }
 }
