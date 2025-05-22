@@ -78,6 +78,7 @@ header{
 }
 nav a{
     display: flex;
+    align-items: center;
     text-decoration: none;
     color: var(--color-neutral--800);
 
