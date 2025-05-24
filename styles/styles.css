@@ -362,6 +362,7 @@ nav a{
     height: 24px;
 }
 .get-started-button__migration{
+
     padding: 12px 48px;
     margin-top: 32px;
     background-color: var(--color-purple--500);
@@ -369,7 +370,6 @@ nav a{
     text-decoration: none;
     color: var(--color-neutral--000);
     height: 48px;
-    width: 189px;
 }
 @media(max-width: 1025px){
     .section-container__migration{
