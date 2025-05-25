@@ -510,7 +510,7 @@ footer{
     }
     .payment-methods-container__footer{
         flex-wrap: wrap;
-        width: 300px;
+        max-width: 300px;
     }
     .policys-container__footer{
         justify-content: space-between;
